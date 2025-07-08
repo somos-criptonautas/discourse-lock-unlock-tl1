@@ -1,0 +1,11 @@
+es:
+  discourse_automation:
+    scriptables:
+      lock_group_trust_level:
+        title: Bloquear nivel de confianza de usuario en grupo
+        description: Cuando un usuario es agregado a un grupo, su nivel de confianza es bloqueado.
+        fields:
+          target_group:
+            label: Grupo objetivo
+          trust_level:
+            label: Nivel de confianza objetivo
