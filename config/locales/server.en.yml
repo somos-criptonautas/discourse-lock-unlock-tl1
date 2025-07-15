@@ -1,11 +1,17 @@
 en:
   discourse_automation:
     scriptables:
-      lock_group_trust_level:
-        title: Lock user trust level in group
+      lock_user_tl_on_group_add:
+        title: Lock user trust level on group add
         description: When a user is added to a group, their trust level is locked.
         fields:
           target_group:
             label: Target group
           trust_level:
             label: Target trust level
+      unlock_user_trust_level:
+        title: Unlock user trust level
+        description: When a user is removed from a group, their trust level is unlocked.
+        fields:
+          target_group:
+            label: Target group

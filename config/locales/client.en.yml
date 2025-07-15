@@ -1,2 +1,14 @@
 en:
   client_js:
+    discourse_automation:
+      scriptables:
+        lock_user_tl_on_group_add:
+          fields:
+            target_group:
+              label: "Group"
+            trust_level:
+              label: "Trust Level"
+        unlock_user_trust_level:
+          fields:
+            target_group:
+              label: "Group"
