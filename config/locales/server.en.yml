@@ -15,3 +15,11 @@ en:
         fields:
           target_group:
             label: Target group
+      backfill_lock_trust_level:
+        title: Backfill-lock user trust level
+        description: Manually lock the trust level for all existing members of a group.
+        fields:
+          target_group:
+            label: Target group
+          trust_level:
+            label: Target trust level

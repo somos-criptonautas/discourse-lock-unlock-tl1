@@ -62,5 +62,37 @@ after_initialize do
         end
       end
     end
+
+    # Script to backfill trust level lock for existing group members
+    DiscourseAutomation::Scriptable.add("backfill_lock_trust_level") do
+      version 1
+      triggerables %i[manual]
+
+      field :target_group, component: :group, required: true
+      field :trust_level, component: :trust_level, required: true
+
+      script do |context, fields, automation|
+        group_id = fields.dig("target_group", "value")
+        trust_level = fields.dig("trust_level", "value")
+        group = Group.find_by(id: group_id)
+
+        if group
+          group.users.find_each do |user|
+            begin
+              user.update!(manual_locked_trust_level: trust_level)
+              Rails.logger.info(
+                "DiscourseLockUnlockTL Backfill: Locked TL#{trust_level} for user ##{user.id} in group ##{group_id}.",
+              )
+            rescue StandardError => e
+              Rails.logger.error(
+                "DiscourseLockUnlockTL Backfill: Error for user ##{user.id}: #{e.message}",
+              )
+            end
+          end
+        else
+          Rails.logger.error("DiscourseLockUnlockTL Backfill: Group ##{group_id} not found.")
+        end
+      end
+    end
   end
 end

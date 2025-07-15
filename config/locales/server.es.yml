@@ -15,3 +15,11 @@ es:
         fields:
           target_group:
             label: Grupo objetivo
+      backfill_lock_trust_level:
+        title: Bloquear nivel de confianza (existentes)
+        description: Bloquea manualmente el nivel de confianza para todos los miembros existentes de un grupo.
+        fields:
+          target_group:
+            label: Grupo objetivo
+          trust_level:
+            label: Nivel de confianza objetivo
