@@ -1,6 +1,6 @@
 # discourse-lock-unlock-tl
 
-This plugin provides two Discourse Automation scripts to manage user trust levels when they are added to or removed from a specific group.
+[EXPERIMENTAL] This plugin provides two Discourse Automation scripts to manage user trust levels when they are added to or removed from a specific group.
 
 ## Installation
 
