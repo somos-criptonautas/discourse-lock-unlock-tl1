@@ -4,7 +4,7 @@
 # about: Locks or unlocks user trust levels via Discourse Automation.
 # version: 0.4
 # authors: satonotdead
-# url: https://github.com/somos-criptonautas/discourse-lock-unlock-tl
+# url: https://github.com/somos-criptonautas/discourse-lock-unlock-tl1
 
 after_initialize do
   if defined?(DiscourseAutomation)

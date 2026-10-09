@@ -1,5 +1,9 @@
 # discourse-lock-unlock-tl
 
+**ENGLISH** | [ESPAÑOL](README.es.md)
+
+Maintained by Criptonautas. Not affiliated with or endorsed by Discourse (Civilized Discourse Construction Kit, Inc.).
+
 [EXPERIMENTAL] This plugin provides two Discourse Automation scripts to manage user trust levels when they are added to or removed from a specific group.
 
 ## Installation
@@ -29,4 +33,6 @@ This script unlocks a user's trust level when they are removed from the specifie
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).
+
+Text of this README under [CC BY-NC-SA 4.0](CC-BY-NC-SA-4.0.txt).
